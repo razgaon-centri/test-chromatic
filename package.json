@@ -8,8 +8,8 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "build-storybook": "nx run general:build-storybook --webpack-stats-json",
-    "chromatic": "npx chromatic --project-token=093081cd0773 --only-changed"
+    "build-storybook": "nx run raz:build-storybook dist/storybook/raz --webpack-stats-json",
+    "chromatic": "npx chromatic --project-token=093081cd0773 --storybook-build-dir=dist/storybook/raz --only-changed"
   },
   "private": true,
   "dependencies": {
@@ -42,10 +42,10 @@
     "@nrwl/storybook": "12.10.1",
     "@nrwl/tao": "12.10.1",
     "@nrwl/workspace": "12.10.1",
-    "@storybook/addon-essentials": "~6.3.0",
-    "@storybook/angular": "~6.3.0",
-    "@storybook/builder-webpack5": "~6.3.0",
-    "@storybook/manager-webpack5": "~6.3.0",
+    "@storybook/addon-essentials": "~6.4.10",
+    "@storybook/angular": "~6.4.10",
+    "@storybook/builder-webpack5": "~6.4.10",
+    "@storybook/manager-webpack5": "~6.4.10",
     "@types/jest": "27.0.2",
     "@types/node": "14.14.33",
     "@typescript-eslint/eslint-plugin": "~4.31.1",
