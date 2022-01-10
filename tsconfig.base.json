@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@raz/general": ["libs/general/src/index.ts"]
+      "@raz/general": ["libs/general/src/index.ts"],
+      "@raz/general2": ["libs/general2/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

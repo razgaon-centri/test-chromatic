@@ -40,6 +40,13 @@
       "tags": [],
       "implicitDependencies": ["general"]
     },
+    "general2": {
+      "tags": []
+    },
+    "general2-e2e": {
+      "tags": [],
+      "implicitDependencies": ["general2"]
+    },
     "raz": {
       "tags": []
     },

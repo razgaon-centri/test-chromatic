@@ -83,6 +83,88 @@
         }
       }
     },
+    "general2": {
+      "projectType": "library",
+      "root": "libs/general2",
+      "sourceRoot": "libs/general2/src",
+      "prefix": "raz",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/general2"],
+          "options": {
+            "jestConfig": "libs/general2/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/general2/src/**/*.ts",
+              "libs/general2/src/**/*.html"
+            ]
+          }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/general2/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/general2",
+            "config": {
+              "configFolder": "libs/general2/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        }
+      }
+    },
+    "general2-e2e": {
+      "root": "apps/general2-e2e",
+      "sourceRoot": "apps/general2-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/general2-e2e/cypress.json",
+            "devServerTarget": "general2:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "general2:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/general2-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "raz": {
       "projectType": "application",
       "root": "apps/raz",
