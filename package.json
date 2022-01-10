@@ -8,7 +8,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "build-storybook": "nx run raz:build-storybook --webpack-stats-json",
+    "build-storybook": "nx run general:build-storybook",
     "chromatic": "npx chromatic --project-token=093081cd0773 --only-changed"
   },
   "private": true,
