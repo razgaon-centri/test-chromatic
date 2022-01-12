@@ -1,0 +1,51 @@
+
+> nx run general:build-storybook --webpackStatsJson --webpackStatsJson=C:\\Users\\CENTRI~1\\AppData\\Local\\Temp\\chromatic--20676-hb4VMPfP6JPg --outputDir=C:\\Users\\CENTRI~1\\AppData\\Local\\Temp\\chromatic--20676-hb4VMPfP6JPg 
+
+>  NX  ui framework: @storybook/angular
+
+
+>  NX  Storybook builder starting ...
+
+info => Cleaning outputDir: C:\Users\Centrical\Documents\GitHub\raz\dist\storybook\general
+info => Loading presets
+info => Compiling manager..
+info => Compiling preview..
+info => Found custom tsconfig.json
+info => Using implicit CSS loaders
+info => Loading angular-cli config for angular lower than 12.2.0
+info => Using angular project "raz:build" for configuring Storybook
+info => Using angular-cli webpack config
+info => Using default Webpack5 setup
+Starting type checking service...
+[BABEL] Note: The code generator has deoptimised the styling of C:\Users\Centrical\Documents\GitHub\raz\node_modules\prettier\standalone.js as it exceeds the max of 500KB.
+info => Manager built (1.03 min)
+info => Preview built (1.15 min)
+WARN System.import() is deprecated and will be removed soon. Use import() instead.
+WARN For more info visit https://webpack.js.org/guides/code-splitting/
+WARN System.import() is deprecated and will be removed soon. Use import() instead.
+WARN For more info visit https://webpack.js.org/guides/code-splitting/
+WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+WARN This can impact web performance.
+WARN Assets: 
+WARN   236.a61c447a.iframe.bundle.js (651 KiB)
+WARN   671.e04a792f.iframe.bundle.js (2.75 MiB)
+WARN   293.05304a06.iframe.bundle.js (644 KiB)
+WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+WARN Entrypoints:
+WARN   main (2.77 MiB)
+WARN       runtime~main.a4a197bb.iframe.bundle.js
+WARN       671.e04a792f.iframe.bundle.js
+WARN       main.d067532c.iframe.bundle.js
+WARN 
+The "path" argument must be of type string. Received an instance of Array
+
+———————————————————————————————————————————————
+
+>  NX   ERROR  Running target "general:build-storybook" failed
+
+  Failed tasks:
+  
+  - general:build-storybook
+  
+  Hint: run the command with --verbose for more details.
+
