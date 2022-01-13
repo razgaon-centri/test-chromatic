@@ -1,0 +1,34 @@
+# .github/workflows/chromatic-game.yml
+# https://stackoverflow.com/questions/61010294/how-to-cache-yarn-packages-in-github-actions/62244232#62244232
+# Workflow name
+name: 'Chromatic'
+
+# Event for the workflow
+on: push
+
+
+# List of jobs
+jobs:
+    chromatic-game:
+        # Operating System
+        runs-on: ubuntu-latest
+        timeout-minutes: 15
+        # Job steps
+        steps:
+            -   name: Checkout repository
+                uses: actions/checkout@v2
+                with:
+                    fetch-depth: 0 # 👈 Required to retrieve git history
+            -   run: npm i
+            -   name: Build storybook
+                run: yarn build-storybook
+            -   name: Publish to Chromatic
+                uses: chromaui/action@v1
+                # Chromatic GitHub Action options
+                with:
+                    token: ${{ secrets.GITHUB_TOKEN }}
+                    storybookBuildDir: dist/storybook/general
+                    # Chromatic projectToken, refer to the manage page to obtain it.
+                    projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+                    onlyChanges: true
+
