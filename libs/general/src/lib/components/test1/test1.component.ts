@@ -11,7 +11,6 @@ export class Test1Component implements OnInit {
 
   ngOnInit(): void {
     console.log('hello');
-
   }
 
 }
