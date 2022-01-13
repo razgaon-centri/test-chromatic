@@ -9,7 +9,7 @@
     "build": "nx build",
     "test": "nx test",
     "build-storybook": "nx run general:build-storybook --webpack-stats-json",
-    "chromatic": "npx chromatic --project-token=093081cd0773 --storybook-build-dir=dist/storybook --only-changed"
+    "chromatic": "npx chromatic --project-token=093081cd0773 --storybook-build-dir=dist/storybook/general --only-changed"
   },
   "private": true,
   "dependencies": {
